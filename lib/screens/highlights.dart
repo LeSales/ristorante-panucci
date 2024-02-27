@@ -10,11 +10,18 @@ class Highlights extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
       child: CustomScrollView(
         slivers: [
           const SliverToBoxAdapter(
-            child: Text('Destaques'),
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 16.0),
+              child: Text(
+                'Destaques',
+                style: TextStyle(fontFamily: "Caveat", fontSize: 32),
+                textAlign: TextAlign.center,
+              ),
+            ),
           ),
           SliverList(
             delegate: SliverChildBuilderDelegate(
